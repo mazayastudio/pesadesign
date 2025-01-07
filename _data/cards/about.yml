@@ -1,0 +1,10 @@
+about_cards:
+  - heading: 'PLS-CADD'
+    content: 'Overhead line design and analysis.'
+    image: 'assets/image.webp'
+  - heading: 'PLS-POLE'
+    content: 'Pole structure modelling and design.'
+    image: 'assets/image2.jpg'
+  - heading: 'PLS-TOWER'
+    content: 'Transmission tower analysis and optimization.'
+    image: 'assets/image3.jpg'

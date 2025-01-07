@@ -1,0 +1,26 @@
+.carousel {
+	&-item {
+		&__img {
+			height: 400px;
+		}
+
+		.carousel-caption {
+			h5,
+			p {
+				color: white;
+			}
+		}
+	}
+
+	&-control-prev-icon,
+	&-control-next-icon {
+		fill: white !important;
+		filter: none !important;
+	}
+
+	&-indicators {
+		button {
+			background-color: white !important;
+		}
+	}
+}
