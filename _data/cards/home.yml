@@ -1,0 +1,13 @@
+home_cards:
+  - heading: 'Building Construction'
+    content: 'Our services in the field of building construction include the planning and design of new buildings, the renovation and conversion of existing buildings, and the management of construction projects. We provide comprehensive support to our clients from the initial idea to the completion of the building.'
+    image: 'assets/image.webp'
+  - heading: 'Infrastructure'
+    content: 'Our services in the field of infrastructure include the planning and design of roads, railways, bridges, tunnels, and other transport infrastructure. We also provide comprehensive support to our clients in the areas of water supply, waste water disposal, and waste management.'
+    image: 'assets/image2.jpg'
+  - heading: 'Energy'
+    content: 'Our services in the field of energy include the planning and design of energy production facilities,
+      energy transmission and distribution systems, and energy efficiency measures. We also provide
+      comprehensive support to our clients in the areas of renewable energy, energy storage, and energy
+      management.'
+    image: 'assets/image3.jpg'

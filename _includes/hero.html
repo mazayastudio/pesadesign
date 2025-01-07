@@ -1,0 +1,65 @@
+<div class="hero">
+	<div class="carousel slide" id="heroimages" data-bs-ride="true">
+		<div class="carousel-indicators">
+			<button
+				class="active"
+				type="button"
+				data-bs-target="#heroimages"
+				data-bs-slide-to="0"
+				aria-label="Slide 1"
+				aria-current="true"
+			></button>
+			<button type="button" data-bs-target="#heroimages" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#heroimages" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		</div>
+
+		<div class="carousel-inner">
+			{%- for item in include.content -%} 
+				{%- if forloop.first -%}
+					<div
+						class="carousel-item active"
+						style="
+							background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+								url('{{ item.image }}');
+							background-size: cover;
+							background-position: center center;
+							background-repeat: no-repeat;
+							height: 400px;
+						"
+					>
+						<div class="carousel-caption d-none d-md-block">
+							<h5>{{ item.heading }}</h5>
+							<p>{{ item.subheading }}</p>
+						</div>
+					</div>
+				{%- else -%}
+					<div
+						class="carousel-item"
+						style="
+							background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+								url('{{ item.image }}');
+							background-size: cover;
+							background-position: center center;
+							background-repeat: no-repeat;
+							height: 400px;
+						"
+					>
+						<div class="carousel-caption d-none d-md-block">
+							<h5>{{ item.heading }}</h5>
+							<p>{{ item.subheading }}</p>
+						</div>
+					</div>
+				{%- endif -%}
+			{%- endfor -%}
+			
+		</div>
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#heroimages" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#heroimages" data-bs-slide="next">
+		<span class="carousel-control-next-icon"></span>
+		<span class="visually-hidden">Next</span>
+	</button>
+</div>

@@ -1,0 +1,5 @@
+background: 'assets/image3.jpg'
+heading: 'Contact us now'
+content: 'We are happy to advise you on your project and look forward to hearing from you. Contact us now and let us plan the future together.'
+button_text: 'Contact us'
+button_link: '/contact'

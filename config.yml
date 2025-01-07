@@ -1,0 +1,11 @@
+title: Pesadesign
+email: office@pesadesign.com
+description: Professional Freelance OHL Design Services
+baseurl: ""
+url: "https://www.pesadesign.com/"
+
+#build settings
+theme: pesadesign
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

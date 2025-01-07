@@ -1,0 +1,10 @@
+home_hero:
+  - heading: "First Slide Label"
+    subheading: "Some representative placeholder content for the first slide."
+    image: "assets/image.webp"
+  - heading: "Second Slide Label"
+    subheading: "Some representative placeholder content for the second slide."
+    image: "assets/image2.jpg"
+  - heading: "Third Slide Label"
+    subheading: "Some representative placeholder content for the third slide."
+    image: "assets/image3.jpg"

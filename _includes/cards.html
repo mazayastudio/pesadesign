@@ -1,0 +1,19 @@
+<div class="cards bg-secondary-subtle py-5">
+	<div class="container">
+		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+			{%- for item in include.content -%}
+				<div class="col align-items-stretch d-flex">
+					<div class="card">
+						<div class="card-body">
+							<img class="img-fluid mb-3 rounded" src="{{ item.image }}" alt="Building Construction" />
+							<div class="h3 text-danger">{{ item.heading }}</div>
+							<p>
+								{{ item.content }}
+							</p>
+						</div>
+					</div>
+				</div>
+			{%- endfor -%}
+		</div>
+	</div>
+</div>
