@@ -5,11 +5,15 @@
 				<div class="col align-items-stretch d-flex">
 					<div class="card">
 						<div class="card-body">
-							<img class="img-fluid mb-3 rounded" src="{{ item.image }}" alt="Building Construction" />
-							<div class="h3 text-danger">{{ item.heading }}</div>
-							<p>
-								{{ item.content }}
-							</p>
+							{%- if item.image -%}
+								<img class="img-fluid mb-3 rounded" src="{{ item.image }}" alt="Building Construction" />
+							{%- endif -%}
+							{%- if item.heading -%}
+								<div class="h3 text-danger">{{ item.heading }}</div>
+							{%- endif -%}
+							{%- if item.content -%}
+								<p>{{ item.content }}</p>
+							{%- endif -%}
 						</div>
 					</div>
 				</div>

@@ -1,0 +1,7 @@
+service_cards:
+  - image: 'assets/Picture1.png'
+  - image: 'assets/Picture2.png'
+  - image: 'assets/Picture3.png'
+  - image: 'assets/Picture4.png'
+  - image: 'assets/Picture5.png'
+  - image: 'assets/Picture6.png'
