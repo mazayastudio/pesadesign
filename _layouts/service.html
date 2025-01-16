@@ -3,9 +3,46 @@ layout: default
 ---
 
 <div class="service">
-	{%- include heading-content.html content=site.data.content.content_service -%}
+	<div class="text-bg-dark">
+		<div class="container py-5">
+			<h1 class='text-danger'>Our Expertise at a glance</h1>
+			<div class='h4'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita velit laborum recusandae incidunt similique temporibus iure magnam? Beatae excepturi, perferendis quam aliquid ducimus blanditiis, repellat sed ipsa molestias dolorem temporibus!</div>
+		</div>
+	</div>
 
-	{%- include cards.html content=site.data.cards.service.service_cards -%}
+	{%- include cards.html content=site.data.cards.home.home_cards -%}
 
-	{%- include cta-banner.html content=site.data.cta_banner.home -%}
+	<div class="container py-5">
+		<div id="portfolio" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item text-center active">
+					<img src="assets/Picture1.png" class="img-fluid" alt="...">
+				</div>
+				<div class="carousel-item text-center">
+					<img src="assets/Picture2.png" class="img-fluid" alt="...">
+				</div>
+				<div class="carousel-item text-center">
+					<img src="assets/Picture3.png" class="img-fluid" alt="...">
+				</div>
+				<div class="carousel-item text-center">
+					<img src="assets/Picture4.png" class="img-fluid" alt="...">
+				</div>
+				<div class="carousel-item text-center">
+					<img src="assets/Picture5.png" class="img-fluid" alt="...">
+				</div>
+				<div class="carousel-item text-center">
+					<img src="assets/Picture6.png" class="img-fluid" alt="...">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#portfolio" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#portfolio" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
+
 </div>
