@@ -1,4 +1,4 @@
-<header class="header navbar navbar-expand-lg bd-navbar sticky-top">
+<header class="header text-bg-dark navbar navbar-expand-lg bd-navbar sticky-top">
 	<nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main Navigation">
 		<a href="/" class="navbar-brand">
 			<img src="assets/logo.svg" alt="logo" width='50' height='50'>
@@ -42,3 +42,57 @@
 		</div>
 	</nav>
 </header>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		function getMode() {
+			return localStorage.getItem('bs-theme') || 'system';
+		}
+
+		function getSystemMode() {
+			if (window.matchMedia && window.matchMedia('(data-bs-theme: dark)').matches) {
+				return 'dark';
+			} else {
+				return 'light';
+			}
+		}
+
+		function dark() {
+			document.querySelector('.header').classList.remove('text-bg-light');
+			document.querySelector('.header').classList.add('text-bg-dark');
+			document.querySelector('.content').classList.remove('text-bg-light');
+			document.querySelector('.content').classList.add('text-bg-dark');
+		}
+
+		function light() {
+			document.querySelector('.header').classList.remove('text-bg-dark');
+			document.querySelector('.header').classList.add('text-bg-light');
+			document.querySelector('.content').classList.remove('text-bg-dark');
+			document.querySelector('.content').classList.add('text-bg-light');
+		}
+
+		function setMode() {
+			const currentMode = getMode();
+			const systemMode = getSystemMode();
+			switch (currentMode) {
+				case 'dark':
+					dark();
+					break;
+				case 'light':
+					light();
+					break;
+				case 'system':
+					if (systemMode === 'dark') {
+						light();
+					} else {
+						dark();
+					}
+					break;
+			}
+		}
+
+		document.getElementById('dark').addEventListener('click', setMode);
+		document.getElementById('light').addEventListener('click', setMode);
+		document.getElementById('system').addEventListener('click', setMode);
+	})
+</script>
