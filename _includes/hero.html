@@ -11,6 +11,8 @@
 			></button>
 			<button type="button" data-bs-target="#heroimages" data-bs-slide-to="1" aria-label="Slide 2"></button>
 			<button type="button" data-bs-target="#heroimages" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			<button type="button" data-bs-target="#heroimages" data-bs-slide-to="3" aria-label="Slide 4"></button>
+			<button type="button" data-bs-target="#heroimages" data-bs-slide-to="4" aria-label="Slide 5"></button>
 		</div>
 
 		<div class="carousel-inner">
@@ -24,13 +26,16 @@
 							background-size: cover;
 							background-position: center center;
 							background-repeat: no-repeat;
-							height: 400px;
+							height: 500px;
 						"
 					>
-						<div class="carousel-caption d-none d-md-block">
-							<h5>{{ item.heading }}</h5>
-							<p>{{ item.subheading }}</p>
-						</div>
+						{%- if item.heading != "" or item.subheading !="" -%}
+							<div class="carousel-caption d-none d-md-block">
+								<h5>{{ item.heading }}</h5>
+								<p>{{ item.subheading }}</p>
+							</div>
+						{%- endif -%}
+						<p class="fs-6 me-3 position-absolute bottom-0 end-0">Photo by: Tom Borger</p>
 					</div>
 				{%- else -%}
 					<div
@@ -41,25 +46,28 @@
 							background-size: cover;
 							background-position: center center;
 							background-repeat: no-repeat;
-							height: 400px;
+							height: 500px;
 						"
 					>
+					{%- if item.heading != "" or item.subheading !="" -%}
 						<div class="carousel-caption d-none d-md-block">
 							<h5>{{ item.heading }}</h5>
 							<p>{{ item.subheading }}</p>
 						</div>
+					{%- endif -%}
 					</div>
+					<p class="fs-6 me-3 position-absolute bottom-0 end-0">Photo by: Tom Borger</p>
 				{%- endif -%}
 			{%- endfor -%}
 			
 		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#heroimages" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#heroimages" data-bs-slide="next">
+			<span class="carousel-control-next-icon"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
 	</div>
-	<button class="carousel-control-prev" type="button" data-bs-target="#heroimages" data-bs-slide="prev">
-		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		<span class="visually-hidden">Previous</span>
-	</button>
-	<button class="carousel-control-next" type="button" data-bs-target="#heroimages" data-bs-slide="next">
-		<span class="carousel-control-next-icon"></span>
-		<span class="visually-hidden">Next</span>
-	</button>
 </div>
