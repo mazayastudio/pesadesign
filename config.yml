@@ -6,6 +6,10 @@ url: "https://www.pesadesign.com/"
 
 #build settings
 theme: pesadesign
+sass:
+  sass_dir: _sass
+  style: compressed
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sass-converter
